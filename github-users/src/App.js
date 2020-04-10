@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Profile from "./components/Profile.js";
+import { Container } from "reactstrap";
 
 class App extends React.Component {
     constructor() {
@@ -26,10 +27,12 @@ class App extends React.Component {
     }
 
     render() {
-        console.log(this.state.myFollowers);
+        console.log(this.state.myData);
         return (
             <div className="App">
-                <Profile attrs={this.state.myData} />
+                <Container>
+                    <Profile attrs={this.state.myData} />
+                </Container>
             </div>
         );
     }
