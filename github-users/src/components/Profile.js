@@ -135,22 +135,10 @@ class Profile extends React.Component {
                                     active: this.state.activeTab === "2",
                                 })}
                                 onClick={() => {
-                                    this.toggle("3");
+                                    this.toggle("2");
                                 }}
                             >
                                 Followers
-                            </NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink
-                                className={classnames({
-                                    active: this.state.activeTab === "3",
-                                })}
-                                onClick={() => {
-                                    this.toggle("4");
-                                }}
-                            >
-                                Following
                             </NavLink>
                         </NavItem>
                     </Nav>
@@ -158,26 +146,25 @@ class Profile extends React.Component {
                         <TabPane tabId="1">
                             <p>Recent Repositories</p>
                             <Row>
-                                {this.props.repos.map((repo) => {
+                                {this.props.repos.slice(0, 6).map((repo, i) => {
                                     return (
-                                        <Col sm="6" key={repo.login}>
+                                        <Col sm="6" key={i}>
                                             <Repo repo={repo} />
                                         </Col>
                                     );
                                 })}
                             </Row>
+                            <Row>
+                                <Col sm="12" className="contribution-section">
+                                    <img
+                                        src={`http://ghchart.rshah.org/${this.props.attrs.login}`}
+                                        alt={this.props.attrs.name}
+                                    />
+                                </Col>
+                            </Row>
                         </TabPane>
                         <TabPane tabId="2">
                             {this.props.followers.map((user) => {
-                                return (
-                                    <Row key={user.login}>
-                                        <User user={user} />
-                                    </Row>
-                                );
-                            })}
-                        </TabPane>
-                        <TabPane tabId="3">
-                            {this.props.following.map((user) => {
                                 return (
                                     <Row key={user.login}>
                                         <User user={user} />
