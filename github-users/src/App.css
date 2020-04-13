@@ -3,8 +3,18 @@ img {
 }
 
 .App {
-    border-top: 60px solid #24292e;
+    /* border-top: 60px solid #24292e; */
     font-size: 0.9rem;
+}
+
+.header {
+    background: #24292e;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+form input {
+    margin-right: 10px;
 }
 
 .container {
@@ -77,7 +87,7 @@ h1 > span:last-child {
 
 .card-title {
     margin-bottom: 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .user-card {

@@ -8,7 +8,6 @@ import {
     Row,
     Col,
 } from "reactstrap";
-import { Card, Button, CardTitle, CardText } from "reactstrap";
 import classnames from "classnames";
 import User from "./User.js";
 import Repo from "./Repo.js";

@@ -10,6 +10,7 @@ const Repo = (props) => {
                         href={props.repo.html_url}
                         alt={props.repo.name}
                         target="_blank"
+                        rel="noopener noreferrer"
                     >
                         {props.repo.name}
                     </a>
@@ -17,7 +18,7 @@ const Repo = (props) => {
                 <CardText>{props.repo.description}</CardText>
                 <p className="language">
                     <svg
-                        class="bi bi-circle-fill"
+                        className="bi bi-circle-fill"
                         width="1em"
                         height="1em"
                         viewBox="0 0 16 16"
