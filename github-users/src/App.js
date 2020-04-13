@@ -15,11 +15,11 @@ class App extends React.Component {
         };
     }
 
-    componentDidMount() {
+    callPromise = (user) => {
         Promise.all([
-            fetch(`https://api.github.com/users/${this.state.user}`),
-            fetch(`https://api.github.com/users/${this.state.user}/repos`),
-            fetch(`https://api.github.com/users/${this.state.user}/followers`),
+            fetch(`https://api.github.com/users/${user}`),
+            fetch(`https://api.github.com/users/${user}/repos`),
+            fetch(`https://api.github.com/users/${user}/followers`),
         ])
             .then(([res1, res2, res3]) =>
                 Promise.all([res1.json(), res2.json(), res3.json()])
@@ -31,35 +31,23 @@ class App extends React.Component {
                     followers: data3,
                 })
             );
-    }
+    };
 
     keyHandler = (key) => {
         //console.log(key);
         this.setState({ user: key });
     };
 
+    componentDidMount() {
+        this.callPromise(this.state.user);
+    }
+
     componentDidUpdate(prevProps, prevState) {
         //console.log(prevState.user);
         //console.log(this.state.user);
 
         if (prevState.user != this.state.user) {
-            Promise.all([
-                fetch(`https://api.github.com/users/${this.state.user}`),
-                fetch(`https://api.github.com/users/${this.state.user}/repos`),
-                fetch(
-                    `https://api.github.com/users/${this.state.user}/followers`
-                ),
-            ])
-                .then(([res1, res2, res3]) =>
-                    Promise.all([res1.json(), res2.json(), res3.json()])
-                )
-                .then(([data1, data2, data3]) =>
-                    this.setState({
-                        data: data1,
-                        repos: data2,
-                        followers: data3,
-                    })
-                );
+            this.callPromise(this.state.user);
         }
     }
 
