@@ -79,8 +79,8 @@ class Profile extends React.Component {
                             />
                             <path d="M6.752 8.932l.432-.252-.504-.864-.432.252.504.864zm-6 3.5l6-3.5-.504-.864-6 3.5.504.864zm8.496-3.5l-.432-.252.504-.864.432.252-.504.864zm6 3.5l-6-3.5.504-.864 6 3.5-.504.864z" />
                         </svg>{" "}
-                        <a href="mailto:johnoblenda@gmail.com">
-                            johnoblenda@gmail.com
+                        <a href={`mailto:${this.props.attrs.email}`}>
+                            {this.props.attrs.email}
                         </a>
                     </p>
                     <p>

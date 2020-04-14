@@ -46,7 +46,7 @@ class App extends React.Component {
         //console.log(prevState.user);
         //console.log(this.state.user);
 
-        if (prevState.user != this.state.user) {
+        if (prevState.user !== this.state.user) {
             this.callPromise(this.state.user);
         }
     }
