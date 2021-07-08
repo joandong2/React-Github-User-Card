@@ -1,0 +1,125 @@
+img {
+    width: 100%;
+}
+
+.App {
+    /* border-top: 60px solid #24292e; */
+    font-size: 0.9rem;
+}
+
+.header {
+    background: #24292e;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+form input {
+    margin-right: 10px;
+}
+
+.container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.information p {
+    margin-bottom: 0;
+}
+
+.information .bio {
+    margin-bottom: 15px;
+}
+
+h1 > span {
+    display: block;
+}
+
+h1 > span:first-child {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+h1 > span:last-child {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.nav-tabs {
+    margin-bottom: 20px;
+}
+
+.nav-tabs .nav-item {
+    margin-right: 10px;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    border-top: unset;
+    border-left: unset;
+    border-right: unset;
+    border-bottom: 2px solid #e36209;
+    font-weight: bold;
+}
+
+.nav-tabs .nav-link:hover {
+    border-top: unset;
+    border-left: unset;
+    border-right: unset;
+    border-bottom: 2px solid #e1e4e8;
+    margin-bottom: 0px;
+}
+
+.card {
+    padding: 10px;
+    margin-bottom: 15px;
+    min-height: 164px;
+}
+
+.card svg {
+    color: red;
+    font-size: 0.65rem;
+    margin-right: 5px;
+    vertical-align: baseline;
+}
+
+.card-title {
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+.user-card {
+    padding-bottom: 20px;
+    font-size: 0.8rem;
+}
+
+.user-card p {
+    margin-bottom: 5px;
+}
+
+.user-card p:first-child {
+    font-size: 1.1rem;
+}
+
+.user-card p > span {
+    margin-left: 10px;
+    font-size: 0.8rem;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+}
+
+.border-bottom {
+    min-height: 1px;
+    max-width: 97% !important;
+    margin: 0 auto 20px;
+}
+
+.contribution-section img {
+    border: 1px solid #e1e4e8;
+    padding: 20px;
+}
